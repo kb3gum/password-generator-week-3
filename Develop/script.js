@@ -92,7 +92,7 @@ function generatePassword() {
   ]; 
 
   
-  // Create a variable to store our generated password
+  // Create a variable to store our generated password, variable is length stated and prompts
   var password = "";
   var passwordLength="";
 
@@ -104,7 +104,8 @@ function generatePassword() {
 
   console.log (passwordLength);
 
-  
+  // restricted to allow user to enter numeric value only non numeric characters not accepted
+
   if (isNaN(passwordLength)) {
     alert("Please enter a valid number");
     return;
@@ -126,6 +127,8 @@ function generatePassword() {
 
   const passwordSymbol = confirm("would you like password to contain symbols?");
   console.log(passwordSymbol)
+
+  // user to select if they would like different arrays to form password using random selection
 
   if (passwordUpper) {
     const randomUpperIndex = Math.floor(Math.random() * 26);
@@ -151,7 +154,7 @@ function generatePassword() {
     password = password [Math.floor(Math.random() * passwordLength];
   }
 
-  // Return our created password
+  // Return our created password, password returned fits criteria of lenght stated in acceptance criteria >8 <128 with a selection of boolean values
   return password;
   function generatePassword ()
   var passwordTextArea= document.getElementById("password")
