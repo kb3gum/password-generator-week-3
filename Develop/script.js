@@ -30,7 +30,7 @@ function generatePassword() {
     "x",
     "y",
     "z",
-  ]; 
+  ];
   var passwordUppercase = [
     "A",
     "B",
@@ -58,8 +58,8 @@ function generatePassword() {
     "X",
     "Y",
     "Z",
-  ]; 
-  var passwordNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; 
+  ];
+  var passwordNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   var passwordSymbols = [
     "!",
     "@",
@@ -89,20 +89,16 @@ function generatePassword() {
     "/",
     "-",
     "=",
-  ]; 
+  ];
 
-  
   // Create a variable to store our generated password, variable is length stated and prompts
   var password = "";
-  var passwordLength="";
+  var passwordLength = "";
+  var options = [];
 
-  // Logic would go here
-
-  // function generatePassword () {}
-
-  const passwordLength = prompt("Length of password minimum 8 maximum 128 characters");
-
-  console.log (passwordLength);
+  passwordLength = prompt(
+    "Length of password minimum 8 maximum 128 characters"
+  );
 
   // restricted to allow user to enter numeric value only non numeric characters not accepted
 
@@ -112,65 +108,56 @@ function generatePassword() {
   }
 
   if (passwordLength < 8 || passwordLength > 128) {
-    alert( "password should contain a minimum of 8 characters and not exceed 128 characters");
+    alert(
+      "password should contain a minimum of 8 characters and not exceed 128 characters"
+    );
     return;
   }
+  // Confirms to ensure the user is selecting choices suited to their password requirements
+  const passwordUpper = confirm(
+    "would you like password to contain uppercase characters?"
+  );
 
-  const passwordUpper = confirm("would you like password to contain uppercase characters?");
-  console.log(passwordUpper);
-
-  const passwordLower = confirm("would you like password to contain lowercase characters?");
-  console.log(passwordLower)
+  const passwordLower = confirm(
+    "would you like password to contain lowercase characters?"
+  );
 
   const passwordNumber = confirm("would you like password to contain numbers?");
-  console.log(passwordNumber)
 
   const passwordSymbol = confirm("would you like password to contain symbols?");
-  console.log(passwordSymbol)
 
   // user to select if they would like different arrays to form password using random selection
 
   if (passwordUpper) {
-    const randomUpperIndex = Math.floor(Math.random() * 26);
+    options = [...options, ...passwordUppercase];
   }
 
   if (passwordLower) {
-    const randomLowerIndex = Math.floor(Math.random() * 26);
+    options = [...options, ...passwordLowercase];
   }
 
   if (passwordNumber) {
-    const randomNumberIndex = Math.floor(
-      Math.random() * passwordNumbers.length
-    );
+    options = [...options, ...passwordNumbers];
   }
 
   if (passwordSymbol) {
-    const randomSymbolIndex = Math.floor(
-      Math.random() * passwordSymbols.length
-    );
+    options = [...options, ...passwordSymbols];
   }
 
-  for (var i= 0; i <passwordLength; i++){
-    password = password [Math.floor(Math.random() * passwordLength];
+  for (var i = 0; i < passwordLength; i++) {
+    password += options[Math.floor(Math.random() * options.length)];
   }
 
   // Return our created password, password returned fits criteria of lenght stated in acceptance criteria >8 <128 with a selection of boolean values
   return password;
-  function generatePassword ()
-  var passwordTextArea= document.getElementById("password")
-  passwordTextArea= password
+}
 
-  for(const passwordLength= 8; 128; randomUpperIndex, randomLowerIndex, randomNumberIndex, randomSymbolIndex) {
-    console.log(passwordLength)
-  }
-
- // Write password to the #password input
-  function writePassword()
+// Write password to the #password input
+function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
