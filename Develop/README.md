@@ -11,10 +11,12 @@ User will see landing page when visiting this site with output box and will need
 
 ## Screenshots
 
+![alt text](Assets/main-page.png)
+
 open app
 screen shots, enter hello ,6 .129
 app working and not working
 
 ## Deployment Link
 
-Click [here] to view deployed site
+Click [here](https://kb3gum.github.io/password-generator-week-3/) to view deployed site on GitHub pages.
