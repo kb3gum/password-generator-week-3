@@ -11,7 +11,29 @@ User will see landing page when visiting this site with output box and will need
 
 ## Screenshots
 
+#### Main Page
+
 ![alt text](Assets\landingpage.png)
+
+#### User enters characters
+
+![alt text](assets\nonnumeric.png)
+
+#### User must enter numeric value "Alert Prompt" displayed
+
+![alt text](assets\entervalidnumber.png)
+
+#### Upon entering a valid submission user will have options to confirm if they would like to include upper and lower characters aswell as number or symbols
+
+![alt text](assets\validprompts.png)
+
+#### Once all values have been returned either true or false a randomly generated password will be displayed in the output box
+
+![alt text](assets\successful.png)
+
+#### The requirements set out have been created to ensure randomly genrated password meets users requirements, screenshot below shows removing options returns numbers only and no upper,lower or symbol characters as part of randomly genrated password
+
+![alt text](assets\removingoptions.png)
 
 ## Deployment Link
 
