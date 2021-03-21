@@ -2,16 +2,12 @@
 
 ## Description
 
-this is an application to geneate a secure random password based on user requirements
-
-app will ask user to enter passwprd lenth with upe lwer numbers special in paswrd, uses this criteria to generate random pw
+This is an application to generate a secure random password based on user requirements. It will ask user t enter a password length with an option of having upper and lower case characters and user could also select if they would like numbers and symbols to form part of the random generated password.
+this is an application to generate a secure random password based on user requirements
 
 ## Getting started
 
-how to generate password what to do
-
-visit this site
-if run locally open live serve and follow instructions to generate password
+User will see landing page when visiting this site with output box and will need to select generate password to recieve further prompts. User will only be able to enter numeric values if non numeric values are entered user will be prompted via alert. User will have options to have either upper,lower,numbers and symbols as part of the generic password. User will need to confirm if they would like either at each prompt. Finally a random password will be generated and displayed in the output box for user to see based on user requirements.
 
 ## Screenshots
 
@@ -21,4 +17,4 @@ app working and not working
 
 ## Deployment Link
 
-Click []
+Click [here] to view deployed site

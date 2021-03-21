@@ -148,7 +148,7 @@ function generatePassword() {
     password += options[Math.floor(Math.random() * options.length)];
   }
 
-  // Return our created password, password returned fits criteria of lenght stated in acceptance criteria >8 <128 with a selection of boolean values
+  // Return our created password, password returned fits criteria of length stated in acceptance criteria >8 <128 with a selection of boolean values
   return password;
 }
 
